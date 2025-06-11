@@ -44,7 +44,7 @@ def run_terminal_command(command: str) -> str:
         return f"An error occurred while trying to run the command {command}: {str(e)}"
 
 tools = [run_terminal_command]
-llm = ChatGoogleGenerativeAI(model='gemini-1.5-flash', temperature=0)
+llm = ChatAnthropic(model='claude-3-sonnet-20240229', temperature=0)
 
 SYSTEM_PROMPT = """
 You are a helpful AI assistant with the ability to execute commands in a user's terminal.
